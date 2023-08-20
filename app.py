@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, render_template
 from pymongo import MongoClient
 import time
 import hashlib
-from bson import ObjectId
 
 app = Flask(__name__)
 
@@ -48,12 +47,7 @@ def add_transaction():
     data = request.form['name']
     new_block = Block(index, previous_hash, timestamp, data)
     new_block.mine_block(1)
-    blockchain.append(new_block)
-
-    # Create a new block every 5 transactions
-    if len(blockchain) % 5 == 0:
-        blocks_collection.insert_many([block.__dict__ for block in blockchain[-5:]])
-    
+    blockchain.append(new_block)    
     return jsonify({"message": "Transaction added"})
 
 @app.route('/get_chain', methods=['GET'])

@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Transactions</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>{{ sku }}</h1>
+    <ul>
+        {% for transaction in history %}
+        <li>
+            {{ transaction.timestamp }}: 
+            {{ transaction.buyer }} bought 
+            {{ transaction.skuPerformance }}x 
+            {{ transaction.sku }} from 
+            {{ transaction.seller }} by 
+            {{ transaction.amount }}€
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

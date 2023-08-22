@@ -28,17 +28,18 @@ class Block:
         print("Block mined: " + self.hash)
 
 class Transaction:
-    def __init__(self, sender, recipient, sku, amount, impactAddition, timestamp):
-        self.sender = sender
-        self.recipient = recipient
+    def __init__(self, buyer, seller, sku, amount, skuPerformance, skuImpact, timestamp):
+        self.buyer = buyer
+        self.seller = seller
         self.sku = sku
         self.amount = amount
-        self.impactAddition = impactAddition
+        self.skuPerformance = skuPerformance
+        self.skuImpact = skuImpact
         self.timestamp = timestamp
         self.hash = self.calculate_hash()
 
     def calculate_hash(self):
-        data = f"{self.sender}{self.recipient}{self.amount}{self.timestamp}"
+        data = f"{self.buyer}{self.seller}{self.amount}{self.skuPerformance}{self.skuImpact}{self.timestamp}"
         return hashlib.sha256(data.encode('utf-8')).hexdigest()
 
 # FUNCTIONS

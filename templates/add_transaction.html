@@ -7,16 +7,18 @@
 <body>
     <h1>New transaction</h1>
     <form action="{{ url_for('add_transaction') }}" method="post">
-        <label for="sender">Sender</label>
-        <input type="text" name="sender" id="sender" required>
-        <label for="recipient">Recipient</label>
-        <input type="text" name="recipient" id="recipient" required>
+        <label for="buyer">Buyer</label>
+        <input type="text" name="buyer" id="buyer" required>
+        <label for="seller">Seller</label>
+        <input type="text" name="seller" id="seller" required>
         <label for="sku">SKU</label>
         <input type="text" name="sku" id="sku" required>
         <label for="amount">Amount</label>
         <input type="number" name="amount" id="amount" required>
-        <label for="impact">Impact addition</label>
-        <input type="number" name="impact" id="impact" value="0" required>
+        <label for="skuPerformance">Performance</label>
+        <input type="number" name="skuPerformance" id="skuPerformance" value="1">
+        <label for="skuImpact">Impact addition</label>
+        <input type="number" name="skuImpact" id="skuImpact" value="0">
         <input type="submit" value="Add">
     </form>
     <p>{{ message }}</p>

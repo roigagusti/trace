@@ -22,13 +22,14 @@ def index():
 @app.route('/add_transaction', methods=['POST'])
 def add_transaction():
     # Create transaction
-    sender = request.form['sender']
-    recipient = request.form['recipient']
+    buyer = request.form['buyer']
+    seller = request.form['seller']
     sku = request.form['sku']
     amount = request.form['amount']
-    impactAddition = request.form['impact']
+    skuPerformance = request.form['skuPerformance']
+    skuImpact = request.form['skuImpact']
     timestamp = int(time.time())
-    transaction = Transaction(sender, recipient, sku, amount, impactAddition, timestamp)
+    transaction = Transaction(buyer, seller, sku, amount, skuPerformance, skuImpact, timestamp)
     transactions.append(transaction)
 
     # Each 5 transactions, create a new block
@@ -60,6 +61,17 @@ def get_chain():
 def get_balance(user):
     value = balance(blockchain,user)
     return jsonify(value)
+
+@app.route('/product-life/<sku>')
+def get_productLife(sku):
+    history = []
+    # Get all transactions with the same sku and return their properties and how many times they have been used, paid, etc.
+    for block in blockchain:
+        for transaction in block.transactions:
+            if transaction['sku'] == sku:
+                history.append(transaction)
+    return render_template('product_life.html', sku=sku, history=history)
+                
 
 
 

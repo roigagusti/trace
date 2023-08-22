@@ -11,29 +11,31 @@
     {
         "index": 1,
         "previous_hash": "044750ce7cceadc96f5dc8f695340c18ab4a05a3de2b374ef7b9316895a3286b",
-        "timestamp": 1692720874,
-        "description": "35463a3826a4f6f043735d8f1c6483f38dbbff56fd6c47581c28742cf077f7b9,9ee43b38149671042e48899f9c766890966fed50c7adc8fb8a6eed3cddb729f7",
+        "timestamp": 1692722913,
+        "description": "37b5cbda8a8130ea811da26f3716874f61ab8d939482c356b048d4f9b6b8a815,4ef2efc9bd5288937b07fb9a33c1f0c2aaa517c73ff3259ff466178fd0376082",
         "transactions": [
             {
-                "sender": "sr",
-                "recipient": "ar",
-                "sku": "MCHO2001",
-                "amount": "400",
-                "impactAddition": "0",
-                "timestamp": 1692720857,
-                "hash": "35463a3826a4f6f043735d8f1c6483f38dbbff56fd6c47581c28742cf077f7b9"
+                "buyer": "ar",
+                "seller": "sr",
+                "sku": "MCHO2002",
+                "amount": "10",
+                "skuPerformance": "1",
+                "skuImpact": "0",
+                "timestamp": 1692722897,
+                "hash": "37b5cbda8a8130ea811da26f3716874f61ab8d939482c356b048d4f9b6b8a815"
             },
             {
-                "sender": "ar",
-                "recipient": "sr",
-                "sku": "MPER2002",
-                "amount": "10",
-                "impactAddition": "4",
-                "timestamp": 1692720874,
-                "hash": "9ee43b38149671042e48899f9c766890966fed50c7adc8fb8a6eed3cddb729f7"
+                "buyer": "sr",
+                "seller": "ar",
+                "sku": "MCHO2002",
+                "amount": "500",
+                "skuPerformance": "1",
+                "skuImpact": "0",
+                "timestamp": 1692722913,
+                "hash": "4ef2efc9bd5288937b07fb9a33c1f0c2aaa517c73ff3259ff466178fd0376082"
             }
         ],
-        "nonce": 18,
-        "hash": "0fce4df90664b3eb8e1d0a14d77b86da107254ae3d8f9731bbdb04dc1d6c29b4"
+        "nonce": 11,
+        "hash": "06000d252aca253e85b5c463cb788f555eaaf66874236962a9612c695758755b"
     }
 ]

@@ -24,9 +24,11 @@ def add_transaction():
     # Create transaction
     sender = request.form['sender']
     recipient = request.form['recipient']
+    sku = request.form['sku']
     amount = request.form['amount']
+    impactAddition = request.form['impact']
     timestamp = int(time.time())
-    transaction = Transaction(sender, recipient, amount, timestamp)
+    transaction = Transaction(sender, recipient, sku, amount, impactAddition, timestamp)
     transactions.append(transaction)
 
     # Each 5 transactions, create a new block
@@ -35,8 +37,8 @@ def add_transaction():
         previous_hash = blockchain[-1].hash
         timestamp = int(time.time())
         trans = [transaction.__dict__ for transaction in transactions]
-        data = ",".join([transaction.hash for transaction in transactions])
-        new_block = Block(index, previous_hash, timestamp, trans, data)
+        description = ",".join([transaction.hash for transaction in transactions])
+        new_block = Block(index, previous_hash, timestamp, description, trans)
         new_block.mine_block(1)
         blockchain.append(new_block)
         transactions.clear()

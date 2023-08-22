@@ -3,105 +3,37 @@
         "index": 0,
         "previous_hash": "0",
         "timestamp": 0,
+        "description": "Genesis Block",
         "transactions": [],
-        "data": "Genesis Block",
         "nonce": 5,
         "hash": "044750ce7cceadc96f5dc8f695340c18ab4a05a3de2b374ef7b9316895a3286b"
     },
     {
         "index": 1,
         "previous_hash": "044750ce7cceadc96f5dc8f695340c18ab4a05a3de2b374ef7b9316895a3286b",
-        "timestamp": 1692719011,
-        "transactions": [
-            {
-                "sender": "ar",
-                "recipient": "sr",
-                "amount": "2304",
-                "timestamp": 1692719001,
-                "hash": "64ba2efa2f1c8c4df679040efc7837e17223a05bbb5db64193b6b6690665d3d6"
-            },
-            {
-                "sender": "sr",
-                "recipient": "ar",
-                "amount": "2404",
-                "timestamp": 1692719011,
-                "hash": "a35a9ce157af21e1b87e80bb20a8bc963b5670aa0a11fc550e66a188c8d8b605"
-            }
-        ],
-        "data": "64ba2efa2f1c8c4df679040efc7837e17223a05bbb5db64193b6b6690665d3d6,a35a9ce157af21e1b87e80bb20a8bc963b5670aa0a11fc550e66a188c8d8b605",
-        "nonce": 83,
-        "hash": "039803c1518c04db61a838ccacb011a4572524720dee1a38ae0a9197efe2cf24"
-    },
-    {
-        "index": 2,
-        "previous_hash": "039803c1518c04db61a838ccacb011a4572524720dee1a38ae0a9197efe2cf24",
-        "timestamp": 1692719170,
-        "transactions": [
-            {
-                "sender": "ar",
-                "recipient": "sr",
-                "amount": "500",
-                "timestamp": 1692719153,
-                "hash": "b2df29da5160b9967aff998a064ca305b57e9e8048f49e8b5d47ae6b24e23f16"
-            },
-            {
-                "sender": "sr",
-                "recipient": "ar",
-                "amount": "350",
-                "timestamp": 1692719170,
-                "hash": "28e0fb38c45506f4cdd9709797bd481b133c0bed18b5aacd37e5f40d2fd2778b"
-            }
-        ],
-        "data": "b2df29da5160b9967aff998a064ca305b57e9e8048f49e8b5d47ae6b24e23f16,28e0fb38c45506f4cdd9709797bd481b133c0bed18b5aacd37e5f40d2fd2778b",
-        "nonce": 8,
-        "hash": "060a23b56735f63caae39934530d9f1abec29bede7cf9959e689e4b0a3da37fc"
-    },
-    {
-        "index": 3,
-        "previous_hash": "060a23b56735f63caae39934530d9f1abec29bede7cf9959e689e4b0a3da37fc",
-        "timestamp": 1692719282,
+        "timestamp": 1692720874,
+        "description": "35463a3826a4f6f043735d8f1c6483f38dbbff56fd6c47581c28742cf077f7b9,9ee43b38149671042e48899f9c766890966fed50c7adc8fb8a6eed3cddb729f7",
         "transactions": [
             {
                 "sender": "sr",
                 "recipient": "ar",
-                "amount": "2000",
-                "timestamp": 1692719275,
-                "hash": "d02485d188e87450e6ff16fa458fd9234656688937b2f55703c0be7181917b5c"
+                "sku": "MCHO2001",
+                "amount": "400",
+                "impactAddition": "0",
+                "timestamp": 1692720857,
+                "hash": "35463a3826a4f6f043735d8f1c6483f38dbbff56fd6c47581c28742cf077f7b9"
             },
             {
                 "sender": "ar",
                 "recipient": "sr",
-                "amount": "1000",
-                "timestamp": 1692719282,
-                "hash": "2acc04388f65265fcc245a377067034308929b17b85f317f721b16204241da09"
+                "sku": "MPER2002",
+                "amount": "10",
+                "impactAddition": "4",
+                "timestamp": 1692720874,
+                "hash": "9ee43b38149671042e48899f9c766890966fed50c7adc8fb8a6eed3cddb729f7"
             }
         ],
-        "data": "d02485d188e87450e6ff16fa458fd9234656688937b2f55703c0be7181917b5c,2acc04388f65265fcc245a377067034308929b17b85f317f721b16204241da09",
-        "nonce": 26,
-        "hash": "0e73abb92d44e189c793debfd3189d8b89f1151f83fe847926dacd6c40c44b48"
-    },
-    {
-        "index": 4,
-        "previous_hash": "0e73abb92d44e189c793debfd3189d8b89f1151f83fe847926dacd6c40c44b48",
-        "timestamp": 1692719681,
-        "transactions": [
-            {
-                "sender": "ar",
-                "recipient": "sr",
-                "amount": "2150",
-                "timestamp": 1692719676,
-                "hash": "56a9f78105c292da769fc88a41910c3de56c7d2a315e9df0642c0f25d1a24ec5"
-            },
-            {
-                "sender": "sr",
-                "recipient": "ar",
-                "amount": "25",
-                "timestamp": 1692719681,
-                "hash": "dbb54fc46c2f6016bbde94c8479d959b12098f5a426ed7af48e713bb8bebdfc0"
-            }
-        ],
-        "data": "56a9f78105c292da769fc88a41910c3de56c7d2a315e9df0642c0f25d1a24ec5,dbb54fc46c2f6016bbde94c8479d959b12098f5a426ed7af48e713bb8bebdfc0",
-        "nonce": 24,
-        "hash": "092cb36225448318ef9d7732d897f49de31a5841bbdd04fcc287839c022e2600"
+        "nonce": 18,
+        "hash": "0fce4df90664b3eb8e1d0a14d77b86da107254ae3d8f9731bbdb04dc1d6c29b4"
     }
 ]

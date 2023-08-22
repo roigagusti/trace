@@ -4,12 +4,12 @@ import json
 
 # CLASSES
 class Block:
-    def __init__(self, index, previous_hash, timestamp, transactions, data, nonce=0, hash=''):
+    def __init__(self, index, previous_hash, timestamp, description, transactions, nonce=0, hash=''):
         self.index = index
         self.previous_hash = previous_hash
         self.timestamp = timestamp
+        self.description = description
         self.transactions = transactions
-        self.data = data
         self.nonce = nonce
         self.hash = self.calculate_hash()
         if hash != '':
@@ -17,7 +17,7 @@ class Block:
                 raise ValueError("Invalid hash")
 
     def calculate_hash(self):
-        data = f"{self.index}{self.previous_hash}{self.timestamp}{self.data}{self.nonce}"
+        data = f"{self.index}{self.previous_hash}{self.timestamp}{self.description}{self.nonce}"
         return hashlib.sha256(data.encode('utf-8')).hexdigest()
 
     def mine_block(self, difficulty):
@@ -28,10 +28,12 @@ class Block:
         print("Block mined: " + self.hash)
 
 class Transaction:
-    def __init__(self, sender, recipient, amount, timestamp):
+    def __init__(self, sender, recipient, sku, amount, impactAddition, timestamp):
         self.sender = sender
         self.recipient = recipient
+        self.sku = sku
         self.amount = amount
+        self.impactAddition = impactAddition
         self.timestamp = timestamp
         self.hash = self.calculate_hash()
 
@@ -48,7 +50,7 @@ def initBlockchain():
             blockchain = [Block(**block) for block in serialized_blocks]
     else:
         # If not, create the blockchain with the genesis block
-        genesis = Block(0, "0", 0, [], "Genesis Block")
+        genesis = Block(0, "0", 0, "Genesis Block", [])
         genesis.mine_block(1)
         blockchain = [genesis]
     transactions = []

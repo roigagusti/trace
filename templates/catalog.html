@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Catalog</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>{{ user }}</h1>
+    <ul>
+        {% for transaction in catalog %}
+        <li>
+            {{ transaction.skuPerformance }}x 
+            {{ transaction.sku }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="#">Add product</a>
+</body>
+</html>

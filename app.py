@@ -50,12 +50,10 @@ def add_transaction():
             json.dump(serialized_blocks, json_file, indent=4)
     return redirect(url_for('index'))
 
-
 @app.route('/get_chain', methods=['GET'])
 def get_chain():
     serialized_blocks = [block.__dict__ for block in blockchain]
     return jsonify(serialized_blocks)
-
 
 @app.route('/balance/<user>')
 def get_balance(user):
@@ -71,8 +69,21 @@ def get_productLife(sku):
             if transaction['sku'] == sku:
                 history.append(transaction)
     return render_template('product_life.html', sku=sku, history=history)
-                
 
+@app.route('/catalog/<user>')
+def catalog(user):
+    catalog = []
+    # Show all transaction.sku in user (transaction.buyer) posesion (not sold later)
+    for block in blockchain:
+        for transaction in block.transactions:
+            if transaction['buyer'] == user:
+                catalog.append(transaction)
+            if transaction['seller'] == user:
+                for element in catalog:
+                    if element['sku'] == transaction['sku']:
+                        catalog.remove(element)
+                        break
+    return render_template('catalog.html', user=user, catalog=catalog)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,8 @@
+## Paquets a instalar per la següent aplicació
+# Title: Trace
+# Author: Aldasoro
+# Template: Trace
+# Version: 0.1
+# Copyright 2023
+
+Flask==2.3.2
